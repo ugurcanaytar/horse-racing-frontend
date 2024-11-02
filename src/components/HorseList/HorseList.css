@@ -1,0 +1,31 @@
+.horse-list {
+    padding: 16px;
+  }
+  
+  .horse-list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .horse-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    flex-shrink: 0;
+  }
+  
+  .horse-details {
+    flex-grow: 1;
+  }
+  
+  .horse-name {
+    font-weight: 500;
+  }
+  
+  .horse-condition {
+    font-size: 14px;
+    color: #666;
+  }
+  

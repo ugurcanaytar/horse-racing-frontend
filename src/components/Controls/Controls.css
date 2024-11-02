@@ -1,0 +1,9 @@
+.controls-panel {
+    padding: 16px;
+  }
+  
+  .controls-panel .MuiButton-root {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  

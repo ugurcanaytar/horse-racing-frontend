@@ -1,0 +1,36 @@
+.program-results {
+    padding: 16px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .round {
+    margin-bottom: 24px;
+  }
+  
+  .round-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .horse-list,
+  .results-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .horse-list-item,
+  .result-item {
+    padding: 4px 0;
+  }
+  
+  .result-item {
+    display: flex;
+    justify-content: space-between;
+  }
+  
