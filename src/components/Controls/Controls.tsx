@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
 import { useDispatch } from 'react-redux';
 import { clearRaceData } from '../../store/slices/raceSlice';
 
-const socket = io('http://18.159.51.223:3443', {
+const socket = io('http://localhost:3443', {
   withCredentials: true,
 });
 
@@ -26,7 +26,7 @@ const Controls: React.FC = () => {
   const generateProgram = async () => {
     try {
       dispatch(clearRaceData());
-      await fetch('http://18.159.51.223:3443/races/generate', { method: 'POST' });
+      await fetch('http://localhost:3443/races/generate', { method: 'POST' });
       socket.emit('programGenerated');
       setIsRunning(false); // Reset running state
     } catch (error) {
@@ -35,7 +35,7 @@ const Controls: React.FC = () => {
   };
 
   const toggleRace = () => {
-    fetch('http://18.159.51.223:3443/races/toggle', {
+    fetch('http://localhost:3443/races/toggle', {
       method: 'POST',
     })
       .then((response) => {

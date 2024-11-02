@@ -17,7 +17,7 @@ import { RaceProgram, RaceResult } from '../../types';
 import { io } from 'socket.io-client';
 import { getAuthHeaders } from '../../utils/api';
 
-const socket = io('http://18.159.51.223:3443', { withCredentials: true });
+const socket = io('http://localhost:3443', { withCredentials: true });
 
 const ProgramResults: React.FC = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const ProgramResults: React.FC = () => {
   // Function to fetch the latest race program
   const fetchProgramData = async () => {
     try {
-      const response = await fetch('http://18.159.51.223:3443/races/current', {
+      const response = await fetch('http://localhost:3443/races/current', {
         headers: getAuthHeaders(),
       });
       const data = await response.json();

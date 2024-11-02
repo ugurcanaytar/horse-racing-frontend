@@ -7,7 +7,7 @@ import Controls from '../components/Controls/Controls';
 import { io } from 'socket.io-client';
 
 // Initialize WebSocket connection
-const socket = io('http://18.159.51.223:3443', {
+const socket = io('http://localhost:3443', {
   withCredentials: true,
 });
 
@@ -20,7 +20,7 @@ const HomePage: React.FC = () => {
     console.log("Fetching updated race data...");
     try {
       // Fetch updated race data from the backend
-      const response = await fetch('http://18.159.51.223:3443/races/current');
+      const response = await fetch('http://localhost:3443/races/current');
       const updatedRaceData = await response.json();
       setRaceData(updatedRaceData); // Update the state
     } catch (error) {

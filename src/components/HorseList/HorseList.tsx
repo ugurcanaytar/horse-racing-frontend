@@ -14,7 +14,7 @@ import './HorseList.css';
 import { Horse } from '../../types';
 import { io, Socket } from 'socket.io-client';
 
-const socket: Socket = io('http://18.159.51.223:3443', {
+const socket: Socket = io('http://localhost:3443', {
   withCredentials: true,
 });
 
@@ -24,7 +24,7 @@ const HorseList: React.FC = () => {
   // Function to fetch horses from the backend
   const fetchHorses = async () => {
     try {
-      const response = await fetch('http://18.159.51.223:3443/horses');
+      const response = await fetch('http://localhost:3443/horses');
       const data = await response.json();
       console.log('Fetched horses:', data);
       setHorses(data);

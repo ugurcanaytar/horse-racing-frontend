@@ -7,7 +7,7 @@ import { RootState } from '../../store';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../../store/slices/userSlice';
 
-const socket = io('http://18.159.51.223:3443', {
+const socket = io('http://localhost:3443', {
   withCredentials: true,
 });
 
@@ -38,7 +38,7 @@ const RaceTrack: React.FC = () => {
       return;
     }
     try {
-      const response = await fetch('http://18.159.51.223:3443/races/current', {
+      const response = await fetch('http://localhost:3443/races/current', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
