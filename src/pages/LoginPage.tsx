@@ -17,7 +17,7 @@ const LoginPage: React.FC = () => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch('http://localhost:3443/auth/login', {
+      const response = await fetch('http://18.159.51.223:3443/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
